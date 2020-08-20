@@ -260,3 +260,11 @@ header {
 
 /* Discover our story */
 
+.global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+.discover-our-story .global-headline {
+  margin-top: 6.9rem;
+}
