@@ -1,0 +1,24 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:wght@400;900&display=swap" rel="stylesheet"> ');
+/* Global style */
+*,*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+root {
+  --main-font:'Source Sans Pro',sans-serif;
+  --secondary-font:'Heer Von Mullerhoff',cursive;
+  --body-font:'Cabin',sans-serif;
+  --main-font-color:#252525;
+  --secondary-font-color:#c59d5f;
+  --body-font-color:#515151;
+}
+
+
+html {
+  font-family: var(--body-font);
+  
+}
