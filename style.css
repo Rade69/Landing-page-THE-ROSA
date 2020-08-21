@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:ital,wght@0,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:ital,wght@0,400;1,900&display=swap");
+
 /* Global style */
 *,
 *::before,
@@ -8,11 +9,10 @@
   box-sizing: border-box;
 }
 
-
-:root{
-  --main-font: 'Source Sans Pro', sans-serif;
-  --secondary-font: 'Herr Von Muellerhoff', cursive;
-  --body-font: 'Cabin', sans-serif;
+:root {
+  --main-font: "Source Sans Pro", sans-serif;
+  --secondary-font: "Herr Von Muellerhoff", cursive;
+  --body-font: "Cabin", sans-serif;
   --main-font-color-dark: #252525;
   --secondary-font-color: #c59d5f;
   --body-font-color: #515151;
@@ -57,13 +57,14 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.5),transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .nav {
   height: 7.2rem;
   display: flex;
-  align-items: center;justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle {
@@ -88,28 +89,28 @@ header {
   left: 0;
   will-change: 80%;
   height: 100vh;
-  background-color:var(--main-font-color-dark);
+  background-color: var(--main-font-color-dark);
   padding: 4.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   z-index: 1250;
   transform: translateX(-100%);
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .nav::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
   opacity: 0;
   transform: scale(0);
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .open .fa-times {
@@ -126,21 +127,21 @@ header {
 
 .open .nav::before {
   opacity: 1;
-  transform:scale(1);
+  transform: scale(1);
 }
 
 .nav-item {
-  border-bottom: 2px solid rgba(255,255,255,.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-link {
   display: block;
   color: white;
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-size: 1.6rem;
   letter-spacing: 2px;
   margin-right: -2px;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .nav-link:hover {
@@ -152,8 +153,8 @@ header {
 .hero {
   width: 100%;
   height: 100vh;
-  background:url("images/hero.jpg") center no-repeat ;
-  background-size:cover;
+  background: url("images/hero.jpg") center no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   text-align: center;
@@ -161,10 +162,10 @@ header {
 
 .sub-headline {
   font-size: 8.5rem;
-  font-family:var(--secondary-font);
+  font-family: var(--secondary-font);
   color: var(--secondary-font-color);
   font-weight: 100;
-  line-height: .4;
+  line-height: 0.4;
   letter-spacing: 2px;
 }
 
@@ -179,42 +180,40 @@ header {
   font-family: var(--main-font);
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .separator {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-
 
 .line {
   width: 100%;
   max-width: 8.4rem;
-  height: .25rem;
+  height: 0.25rem;
   background-color: #fff;
   position: relative;
 }
 
 .line-right::before,
 .line-left::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
-  border: .6rem solid transparent;
+  border: 0.6rem solid transparent;
 }
 
 .line-right::before {
-  border-right-color:#fff;
+  border-right-color: #fff;
   right: 0;
 }
 
 .line-left::before {
-  border-left-color:#fff;
+  border-left-color: #fff;
   left: 0;
 }
 
@@ -234,7 +233,6 @@ header {
   margin-right: -3px;
 }
 
-
 .btn {
   display: inline-block;
   text-transform: uppercase;
@@ -245,10 +243,10 @@ header {
 .cta-btn {
   font-size: 1.1rem;
   background-color: #fff;
-  padding: .9rem 1.8rem;
+  padding: 0.9rem 1.8rem;
   color: var(--body-font-color);
-  border-radius: .4rem;
-  transition: background-color .5s;
+  border-radius: 0.4rem;
+  transition: background-color 0.5s;
 }
 
 .cta-btn:hover,
@@ -256,7 +254,6 @@ header {
   color: #fff;
   background-color: var(--secondary-font-color);
 }
-
 
 /* Discover our story */
 
@@ -267,4 +264,92 @@ header {
 
 .discover-our-story .global-headline {
   margin-top: 6.9rem;
+}
+
+.global-headline .asterisk {
+  color: var(--body-font-color);
+  margin-top: 2.4rem 0;
+}
+
+.headline-dark {
+  color: var(--main-font-color-dark);
+  letter-spacing: 0.7rem;
+  margin-right: -0.7rem;
+}
+
+.global-headline .sub-headline {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+
+.restaurant-info {
+  text-align: center;
+}
+
+.restaurant-description {
+  margin-bottom: 3rem;
+}
+
+.restaurant-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.body-btn {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition: color 0.5s;
+}
+
+.body-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: backgroun-color var(--secondary-font-color);
+}
+
+.body-btn:hover,
+.body-btn:focus {
+  color: var(--main-font-color-dark);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+  background-color: var(--main-font-color-dark);
+}
+
+/* Testeful recipies */
+.tasteful-recipes {
+  background: url(images/tasteful-recipes.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.between {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Discover our menu */
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.discover-our-menu .restaurant-description {
+  padding-top: 3re;
+  margin-bottom: 0;
+}
+
+/* The perfect blend */
+
+.perfect-blend {
+  background: url(images/perfect-blend.jpg);
+  background-size: cover;
 }
