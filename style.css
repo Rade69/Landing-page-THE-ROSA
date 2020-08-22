@@ -25,6 +25,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* body {
+  overflow: hidden;
+} */
+
 section {
   padding: 3.9rem 0;
 }
@@ -167,6 +171,10 @@ header {
   font-weight: 100;
   line-height: 0.4;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .5s;
+  padding: 2rem;
 }
 
 .first-letter {
@@ -181,7 +189,8 @@ header {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
-  margin-top: 2.5rem;
+  margin-right: -.5rem;
+  animation: scale .5s forwards;
 }
 
 .separator {
@@ -196,6 +205,10 @@ header {
   height: 0.25rem;
   background-color: #fff;
   position: relative;
+  opacity: 0;
+  animation: grow 3s forwards;
+  animation-delay: .9s;
+
 }
 
 .line-right::before,
@@ -206,6 +219,9 @@ header {
   transform: translateY(-50%);
   position: absolute;
   border: 0.6rem solid transparent;
+  opacity: 0;
+  animation: grow .5s forwards;
+  animation-delay: 1.2s;
 }
 
 .line-right::before {
@@ -222,6 +238,15 @@ header {
   font-size: 1.2rem;
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
+  animation: spin .5s forwards;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+.single-animation {
+  opacity: 0;
+  animation: fadeDown 1s forwards;
+  animation-delay:  1.5s;
 }
 
 .headline-description h5 {
@@ -380,10 +405,11 @@ footer {
   color: #fff;
   font-size: 2rem;
   padding: 2rem;
+  animation:  up 2s infinite;
 }
 
 .footer-content {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .footer-content h4 {
@@ -450,7 +476,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 20.5rem;
+  margin-left: 15.5rem;
 }
 
 /* Media queries */
@@ -492,4 +518,151 @@ footer {
   .nav-link {
     font-size: 1.3rem;
   }
+
+  .active {
+    position: relative;
+  }
+
+  .active::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .sub-headline {
+    font-size: 10rem;
+  }
+
+  .first-letter {
+    font-size: 12rem;
+  }
+
+  .headline {
+    font-size: 4.7rem;
+    letter-spacing: .8rem;
+  }
+
+  .line {
+    max-width: 11.4rem;
+  }
+
+  .restaurant-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .restaurant-info > div {
+    flex: 1;
+  }
+
+  .padding-right {
+    padding-right: 7rem;
+  }
+
+  .footer-content {
+    max-width: 77.5rem;
+    margin: auto;
+  }
+
+  .footer-content-obout {
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+
+  .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
+  .social-media,
+  .newsletter-form {
+    width: 100%;
+    max-width: 27.3rem;
+    margin:  0 1rem;
+  }
+
+  .social-icons i {
+    opacity: 1;
+  }
+
+  .newsletter-btn {
+    margin-left: 15rem;
+  }
 }
+
+
+/* Animation */
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+
+
